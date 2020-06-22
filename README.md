@@ -14,10 +14,11 @@ asdf plugin-add julia https://github.com/rkyleg/asdf-julia.git
 
 Check [asdf](ashttps://github.com/asdf-vm/asdfdf) readme for instructions on how to install & manage versions of Julia.
 
-## A few notes
+## Release Notes
 
-On OSX:
+### v1.1.0
 
-The script pulls down the app package from the Julia website, but does not install
-as a native app. Instead, it copies the julia directory from the Resources folder
-inside the app package, thus providing the binary to asdf.
+- re-factored install script
+- fixed GitHub CI actions (currently only testing for Linux-x64 and Mac OS)
+- handle different architectures and support freeBSD
+- support installing nightly builds with `asdf install julia nightly`
